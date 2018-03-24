@@ -25,7 +25,8 @@
         <activity
             android:name=".ShapeSettings"
             android:label="@string/title_activity_shape_settings" />
-        <activity android:name=".SettingsPage"></activity>
+        <activity android:name=".SettingsPage" />
+        <activity android:name=".ShapePage"></activity>
     </application>
 
 </manifest>
