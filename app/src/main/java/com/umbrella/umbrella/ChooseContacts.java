@@ -7,6 +7,8 @@ import android.view.View;
 
 public class ChooseContacts extends AppCompatActivity {
 
+    String contactChosen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,4 +18,11 @@ public class ChooseContacts extends AppCompatActivity {
     public void shapeOnClick(View v){
         startActivity(new Intent(ChooseContacts.this, ShapePage.class));
     }
+
+    public void clickNumber(View v){
+        Button button = (Button)v;
+        String buttonText = ((Button)v).getText().toString();
+    }
+
+
 }
