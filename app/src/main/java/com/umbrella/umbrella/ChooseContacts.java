@@ -4,13 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-<<<<<<< HEAD
 import android.widget.Button;
-=======
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
->>>>>>> d45fb0d08e47779a167c2742330f73a3e38e5542
 
 public class ChooseContacts extends AppCompatActivity {
 
@@ -33,7 +30,7 @@ public class ChooseContacts extends AppCompatActivity {
         startActivity(new Intent(ChooseContacts.this, ShapePage.class));
     }
 
-    public void clickNumber(View v){
+    /*public void clickNumber(View v){
         Button number1;
         number1 =(Button)findViewById(R.id.contact1);
         number1.setOnClickListener(v.OnClickListener());
@@ -41,6 +38,6 @@ public class ChooseContacts extends AppCompatActivity {
         String number1Text= ((Button)v).getText().toString();
         System.out.println(number1Text);
 
-    }
+    }*/
 
 }
