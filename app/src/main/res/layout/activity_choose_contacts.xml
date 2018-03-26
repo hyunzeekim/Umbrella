@@ -108,4 +108,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_perm_contact_calendar_black_24dp" />
 
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="85dp" />
+
 </android.support.constraint.ConstraintLayout>
