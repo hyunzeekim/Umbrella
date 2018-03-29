@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="false"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/background_begin"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:srcCompat="#65CBB5"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="59dp" />
 
     <Button
         android:id="@+id/begin_button"
@@ -30,8 +30,8 @@
         android:onClick="beginOnClick"
         android:shadowDy="10"
         android:text="BEGIN"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textColorHighlight="@android:color/holo_blue_dark"
+        android:textColor="#65CBB5"
+        android:textColorHighlight="#65BCC5"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,9 +50,31 @@
         android:onClick="settingOnClick"
         android:shadowColor="@android:color/transparent"
         android:text="SETTINGS"
-        android:textColor="@android:color/holo_blue_light"
+        android:textColor="#65AAB5"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="1267dp"
+        android:layout_height="1284dp"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/Logo"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-21dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="340dp"
+        android:layout_height="337dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/Logo" />
 
 </android.support.constraint.ConstraintLayout>
