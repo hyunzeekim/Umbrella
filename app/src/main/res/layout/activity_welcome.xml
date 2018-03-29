@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="false"
         android:scaleType="centerCrop"
-        app:srcCompat="#65CBB5"
         tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="59dp" />
+        tools:layout_editor_absoluteY="59dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/begin_button"
@@ -30,8 +30,8 @@
         android:onClick="beginOnClick"
         android:shadowDy="10"
         android:text="BEGIN"
-        android:textColor="#65CBB5"
-        android:textColorHighlight="#65BCC5"
+        android:textColor="@android:color/holo_blue_light"
+        android:textColorHighlight="@android:color/holo_blue_dark"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +50,7 @@
         android:onClick="settingOnClick"
         android:shadowColor="@android:color/transparent"
         android:text="SETTINGS"
-        android:textColor="#65AAB5"
+        android:textColor="@android:color/holo_blue_light"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -58,11 +58,11 @@
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="1267dp"
-        android:layout_height="1284dp"
+        android:layout_height="1290dp"
         android:scaleType="fitStart"
-        app:srcCompat="@drawable/Logo"
+        app:srcCompat="@drawable/logo"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-21dp" />
+        tools:layout_editor_absoluteY="-6dp" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -75,6 +75,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/Logo" />
+        app:srcCompat="@drawable/logo" />
 
 </android.support.constraint.ConstraintLayout>
