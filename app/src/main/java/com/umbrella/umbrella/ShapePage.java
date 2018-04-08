@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.os.CountDownTimer;
 import android.content.Intent;
+import java.util.concurrent.TimeUnit;
 
 public class ShapePage extends AppCompatActivity {
 
@@ -28,10 +29,13 @@ public class ShapePage extends AppCompatActivity {
         else if (result.equalsIgnoreCase("15 Minutes")){
             value = 15*60*1000;
         }
-
-            new CountDownTimer(30000, 1000) {
+            new CountDownTimer(value, 1000) {
             public void onTick(long millisUntilFinished) {
-                countdown.setText("seconds remaining: " + millisUntilFinished / 1000);
+            String timeValue = String.format("Time to check-in: %02d:%02d",
+                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
+                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
+                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)));
+            countdown.setText(timeValue);
             }
 
             public void onFinish() {
