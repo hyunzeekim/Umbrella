@@ -4,7 +4,6 @@
     <string name="title_activity_settings_page">Settings</string>
 
     <string-array name="intervals">
-        <item>Choose Your Time Interval                  …</item>
         <item>5 Minutes</item>
         <item>10 Minutes</item>
         <item>15 Minutes</item>
