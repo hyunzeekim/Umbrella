@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.umbrella.umbrella.ChooseContacts">
+    tools:context="com.umbrella.umbrella.ChooseContacts"><![CDATA[
 
-<<<<<<< HEAD
 =======
         tools:ignore="MissingConstraints" />
 =======
@@ -16,19 +15,11 @@
 >>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
 
 
-<<<<<<< HEAD
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/background"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-=======
+    =======
 >>>>>>> 2e1028a065a534fca2f194330c446f6b222c20cc
 >>>>>>> a0366e9d31b4ac7d68355e299f957ed906b63d74
+    ]]>
+
     <Button
         android:id="@+id/begin_button2"
         android:layout_width="333dp"
@@ -89,8 +80,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/arrow_down_float" />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 =======
 
     <CheckBox
@@ -106,7 +96,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.459" />
 =======
         app:layout_constraintVertical_bias="0.457" />
@@ -126,10 +115,10 @@
         android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.455" />
+        app:layout_constraintVertical_bias="0.466" />
 
     <TextView
         android:id="@+id/textView"
