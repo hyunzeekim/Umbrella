@@ -9,15 +9,6 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="0dp">
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/background"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
     <Button
         android:id="@+id/begin_button2"
         android:layout_width="333dp"
@@ -41,16 +32,11 @@
 
     <Spinner
         android:id="@+id/spinner1"
-<<<<<<< HEAD
-        android:layout_width="293dp"
-        android:layout_height="48dp"
-=======
         android:layout_width="304dp"
         android:layout_height="43dp"
->>>>>>> 938ead71080630d90aaa13949e8216b13f3815c7
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="396dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -61,11 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintVertical_bias="0.881"></Spinner>
-=======
         app:layout_constraintVertical_bias="0.077"></Spinner>
->>>>>>> 938ead71080630d90aaa13949e8216b13f3815c7
 
     <EditText
         android:id="@+id/etcontact2"
@@ -83,11 +65,7 @@
         app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintVertical_bias="0.553" />
-=======
         app:layout_constraintVertical_bias="0.607" />
->>>>>>> 938ead71080630d90aaa13949e8216b13f3815c7
 
     <EditText
         android:id="@+id/etcontact"
@@ -105,11 +83,7 @@
         app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintVertical_bias="0.694" />
-=======
         app:layout_constraintVertical_bias="0.466" />
->>>>>>> 938ead71080630d90aaa13949e8216b13f3815c7
 
     <TextView
         android:id="@+id/textView"
@@ -128,7 +102,7 @@
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.361" />
+        app:layout_constraintVertical_bias="0.297" />
 
     <TextView
         android:id="@+id/textView2"
@@ -145,7 +119,7 @@
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.444" />
+        app:layout_constraintVertical_bias="0.373" />
 
     <TextView
         android:id="@+id/textView3"
@@ -157,13 +131,13 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/nunito_extrabold"
         android:text="How often do you want to check in?"
-        android:textColor="@color/white"
+        android:textColor="@android:color/darker_gray"
         android:textColorHighlight="@android:color/black"
         android:textColorHint="@android:color/black"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.017" />
@@ -182,7 +156,7 @@
         app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.561"
+        app:layout_constraintVertical_bias="0.458"
         app:srcCompat="@drawable/ic_perm_contact_calendar_black_24dp" />
 
     <ImageButton
@@ -198,7 +172,7 @@
         app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.682"
+        app:layout_constraintVertical_bias="0.596"
         app:srcCompat="@drawable/ic_perm_contact_calendar_black_24dp" />
 
 </android.support.constraint.ConstraintLayout>
