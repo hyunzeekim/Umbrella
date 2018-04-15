@@ -18,6 +18,6 @@ public class Welcome extends AppCompatActivity {
     }
 
     public void settingOnClick(View v){
-        startActivity(new Intent(Welcome.this, SettingsPage.class));
+        startActivity(new Intent(Welcome.this, CreatePasswordActivity.class));
     }
 }
