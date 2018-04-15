@@ -32,7 +32,7 @@ public class ChooseContacts extends AppCompatActivity {
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         timeInterval.setAdapter(myAdapter);
 
-        b1 = (ImageButton) findViewById(R.id.b1);
+        b1 = (ImageButton)findViewById(R.id.b1);
         b2 =(ImageButton)findViewById(R.id.b2);
 
         b1.setOnClickListener(new View.OnClickListener() {
