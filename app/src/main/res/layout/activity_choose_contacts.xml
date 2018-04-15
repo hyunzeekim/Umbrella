@@ -16,7 +16,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/background"
+<<<<<<< HEAD
         tools:ignore="MissingConstraints" />
+=======
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+>>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
 
 
     <Button
@@ -49,7 +55,11 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
+<<<<<<< HEAD
         android:layout_marginTop="64dp"
+=======
+        android:layout_marginTop="52dp"
+>>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
         android:background="@android:color/background_light"
         android:popupBackground="@android:color/background_light"
         android:textAlignment="center"
@@ -63,14 +73,20 @@
         android:id="@+id/imageButton"
         android:layout_width="39dp"
         android:layout_height="42dp"
+<<<<<<< HEAD
         android:layout_marginEnd="24dp"
         android:layout_marginTop="84dp"
+=======
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="60dp"
+>>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
         android:background="@android:color/transparent"
         android:backgroundTint="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/arrow_down_float" />
 
+<<<<<<< HEAD
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="0dp"
@@ -162,5 +178,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.106" />
+=======
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="316dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="HOW OFTEN DO YOU WANT TO CHECK-IN?"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textColorLink="@android:color/background_light"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
 
 </android.support.constraint.ConstraintLayout>
