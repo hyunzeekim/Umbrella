@@ -36,10 +36,10 @@
         android:fontFamily="@font/nunito_extrabold"
         android:onClick="shapeOnClick"
         android:shadowDy="10"
-        android:text="BEGIN"
+        android:text="START JOURNEY"
         android:textColor="@android:color/holo_blue_dark"
         android:textColorHighlight="@android:color/holo_blue_dark"
-        android:textSize="36sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
@@ -53,8 +53,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.151" />
 <<<<<<< HEAD
         android:layout_marginTop="64dp"
 =======
@@ -69,11 +75,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.052" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="39dp"
-        android:layout_height="42dp"
-<<<<<<< HEAD
+    <<<<<<< HEAD
         android:layout_marginEnd="24dp"
         android:layout_marginTop="84dp"
 =======
@@ -177,22 +179,10 @@
         app:layout_constraintHorizontal_bias="0.165"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106" />
+        app:layout_constraintVertical_bias="0.106" /><![CDATA[
 =======
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="316dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/nunito_extrabold"
-        android:text="HOW OFTEN DO YOU WANT TO CHECK-IN?"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_light"
-        android:textColorLink="@android:color/background_light"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
->>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
 
+    >>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
+
+]]>
 </android.support.constraint.ConstraintLayout>
