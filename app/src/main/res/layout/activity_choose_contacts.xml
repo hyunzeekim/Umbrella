@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/background"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="0dp" />
 
 
     <Button
@@ -118,7 +118,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="52dp"
         android:background="@android:color/background_light"
         android:popupBackground="@android:color/background_light"
         android:textAlignment="center"
@@ -131,11 +131,26 @@
         android:layout_width="39dp"
         android:layout_height="42dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:background="@android:color/transparent"
         android:backgroundTint="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="316dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="HOW OFTEN DO YOU WANT TO CHECK-IN?"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textColorLink="@android:color/background_light"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

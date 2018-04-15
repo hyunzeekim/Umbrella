@@ -12,13 +12,13 @@ import android.widget.Spinner;
 public class ChooseContacts extends AppCompatActivity {
 
     String contactChosen;
-
+    Spinner timeInterval;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_contacts);
 
-        Spinner timeInterval = (Spinner) findViewById(R.id.spinner1);
+        timeInterval = (Spinner) findViewById(R.id.spinner1);
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(ChooseContacts.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.intervals));
@@ -27,7 +27,10 @@ public class ChooseContacts extends AppCompatActivity {
     }
 
     public void shapeOnClick(View v){
-        startActivity(new Intent(ChooseContacts.this, ShapePage.class));
+        Intent timeInterval = new Intent(ChooseContacts.this, ShapePage.class);
+        timeInterval.putExtra("timeInterval", this.timeInterval.getSelectedItem().toString());
+        startActivity(timeInterval);
+
     }
 
     /*public void clickNumber(View v){
