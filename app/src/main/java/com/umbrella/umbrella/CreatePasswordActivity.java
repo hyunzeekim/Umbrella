@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.andrognito.patternlockview.PatternLockView;
 import com.andrognito.patternlockview.listener.PatternLockViewListener;
@@ -18,11 +19,14 @@ public class CreatePasswordActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_password);
 
         mPatternLockView = (PatternLockView) findViewById(R.id.pattern_lock_view);
         mPatternLockView.addPatternLockListener(new PatternLockViewListener() {
+
+
             @Override
             public void onStarted() {
 
@@ -40,7 +44,7 @@ public class CreatePasswordActivity extends AppCompatActivity{
                 editor.putString("password",  PatternLockUtils.patternToString(mPatternLockView, pattern));
                 editor.apply();
 
-                Intent intent = new Intent(getApplicationContext(), ProgramActivity.class);
+                Intent intent = new Intent(getApplicationContext(), Welcome.class);
                 startActivity(intent);
                 finish();
             }
@@ -49,6 +53,7 @@ public class CreatePasswordActivity extends AppCompatActivity{
             public void onCleared() {
 
             }
+
         });
 
     }
