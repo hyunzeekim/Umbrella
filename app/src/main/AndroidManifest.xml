@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CreatePasswordActivity"/>
+        <activity android:name=".InputPasswordActivity"/>
+        <activity android:name=".ProgramActivity"/>
+
 
         <meta-data
             android:name="preloaded_fonts"
@@ -23,13 +27,13 @@
 
         <activity android:name=".ChooseContacts" />
 
-        <!--<activity-->
-            <!--android:name=".ShapeSettings"-->
-            <!--android:label="@string/title_activity_shape_settings" />-->
->>>>>>> 0e2c349650054a76e7610c06357e188ae963add0
+        <!-- <activity -->
+        <!-- android:name=".ShapeSettings" -->
+        <!-- android:label="@string/title_activity_shape_settings" /> -->
+        >>>>>>> 0e2c349650054a76e7610c06357e188ae963add0
         <activity android:name=".SettingsPage" />
-        <activity android:name=".ShapePage"></activity>
+        <activity android:name=".ShapePage" />
+        <activity android:name=".CheckIn"></activity>
     </application>
-
 
 </manifest>
