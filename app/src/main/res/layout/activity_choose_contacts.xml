@@ -4,21 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.umbrella.umbrella.ChooseContacts"><![CDATA[
-
-=======
-        tools:ignore="MissingConstraints" />
-=======
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
->>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
-
-
-    =======
->>>>>>> 2e1028a065a534fca2f194330c446f6b222c20cc
->>>>>>> a0366e9d31b4ac7d68355e299f957ed906b63d74
-    ]]>
+    tools:context="com.umbrella.umbrella.ChooseContacts"
+    tools:ignore="MissingConstraints"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
 
     <Button
         android:id="@+id/begin_button2"
@@ -50,16 +39,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.151" />
         android:layout_marginTop="64dp"
-=======
-        android:layout_marginTop="52dp"
->>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
         android:background="@android:color/background_light"
         android:popupBackground="@android:color/background_light"
         android:textAlignment="center"
@@ -68,20 +48,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.052" />
-     android:layout_marginEnd="24dp"
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="39dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginTop="84dp"
-=======
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="60dp"
->>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
         android:background="@android:color/transparent"
         android:backgroundTint="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/arrow_down_float" />
-
-
-=======
 
     <CheckBox
         android:id="@+id/checkBox2"
@@ -97,10 +75,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.459" />
-=======
-        app:layout_constraintVertical_bias="0.457" />
->>>>>>> 2e1028a065a534fca2f194330c446f6b222c20cc
->>>>>>> a0366e9d31b4ac7d68355e299f957ed906b63d74
 
     <EditText
         android:id="@+id/etContact1"
@@ -175,13 +149,6 @@
         app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" /><![CDATA[
+        app:layout_constraintVertical_bias="0.039" />
 
-
-=======
-
-    >>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
-
-
-]]>
 </android.support.constraint.ConstraintLayout>
