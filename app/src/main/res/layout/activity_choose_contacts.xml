@@ -4,21 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.umbrella.umbrella.ChooseContacts"><![CDATA[
-
-=======
-        tools:ignore="MissingConstraints" />
-=======
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
->>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
-
-
-    =======
->>>>>>> 2e1028a065a534fca2f194330c446f6b222c20cc
->>>>>>> a0366e9d31b4ac7d68355e299f957ed906b63d74
-    ]]>
+    tools:context="com.umbrella.umbrella.ChooseContacts"
+    tools:ignore="MissingConstraints"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
 
     <Button
         android:id="@+id/begin_button2"
@@ -50,16 +39,16 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+<<<<<<< HEAD
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.151" /><![CDATA[
-        android:layout_marginTop="64dp"
 =======
-        android:layout_marginTop="52dp"
->>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
+>>>>>>> e5bbdffc6e0dd96abfa71516ca85a2ad9c8f642c
+        android:layout_marginTop="64dp"
         android:background="@android:color/background_light"
         android:popupBackground="@android:color/background_light"
         android:textAlignment="center"
@@ -68,18 +57,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.052" />
-     android:layout_marginEnd="24dp"
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="39dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginTop="84dp"
-=======
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="60dp"
->>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
         android:background="@android:color/transparent"
         android:backgroundTint="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/arrow_down_float" />
 
+<<<<<<< HEAD
 
 =======
 
@@ -94,6 +85,12 @@
         android:id="@+id/etcontact1"
         android:layout_width="231dp"
         android:layout_height="47dp"
+=======
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="150dp"
+        android:layout_height="71dp"
+>>>>>>> e5bbdffc6e0dd96abfa71516ca85a2ad9c8f642c
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -106,7 +103,11 @@
         app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.466" />
+=======
+        app:layout_constraintVertical_bias="0.459" />
+>>>>>>> e5bbdffc6e0dd96abfa71516ca85a2ad9c8f642c
 
     <EditText
         android:id="@+id/etcontact2"
@@ -136,7 +137,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/nunito_extrabold"
         android:text="CONTACTS"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -172,7 +173,9 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/nunito_extrabold"
         android:text="How often do you want to check in?"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/darker_gray"
+        android:textColorHighlight="@android:color/black"
+        android:textColorHint="@android:color/black"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -180,6 +183,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.039" />
+<<<<<<< HEAD
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/radioGroup"
@@ -227,4 +231,7 @@
 
 
 ]]>
+=======
+
+>>>>>>> e5bbdffc6e0dd96abfa71516ca85a2ad9c8f642c
 </android.support.constraint.ConstraintLayout>
