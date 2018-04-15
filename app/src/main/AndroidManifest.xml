@@ -16,10 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Welcome"/>
-        <activity android:name=".InputPasswordActivity"/>
-        <activity android:name=".ProgramActivity"/>
-
+        <activity android:name=".Welcome" />
+        <activity android:name=".InputPasswordActivity" />
+        <activity android:name=".ProgramActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
@@ -29,11 +28,12 @@
 
         <!-- <activity -->
         <!-- android:name=".ShapeSettings" -->
-        <!-- android:label="@string/title_activity_shape_settings" /> -->
+        <!-- android:label="@string/title_activity_shape_settings" /> --><![CDATA[
         >>>>>>> 0e2c349650054a76e7610c06357e188ae963add0
-        <activity android:name=".SettingsPage" />
+        ]]>
         <activity android:name=".ShapePage" />
-        <activity android:name=".CheckIn"></activity>
+        <activity android:name=".CheckIn" />
+        <activity android:name=".Finish"></activity>
     </application>
 
 </manifest>

@@ -3,11 +3,11 @@ package com.umbrella.umbrella;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SettingsPage extends AppCompatActivity {
+public class Finish extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings_page);
+        setContentView(R.layout.activity_finish);
     }
 }

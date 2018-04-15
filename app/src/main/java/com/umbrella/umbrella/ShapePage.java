@@ -2,6 +2,7 @@ package com.umbrella.umbrella;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.os.CountDownTimer;
 import android.content.Intent;
@@ -31,19 +32,23 @@ public class ShapePage extends AppCompatActivity {
         }
             new CountDownTimer(value, 1000) {
             public void onTick(long millisUntilFinished) {
-            String timeValue = String.format("Time to check-in: %02d:%02d",
+            String timeValue = String.format("%02d:%02d",
                     TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
                     TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
                             TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)));
             countdown.setText(timeValue);
             }
 
-            public void onFinish() {
-                countdown.setText("done!");
+            public void onFinish(){
+                startActivity(new Intent(ShapePage.this, InputPasswordActivity.class));
             }
         }.start();
     }
 
-        }
+    public void endJourney(View v){
+        startActivity(new Intent(ShapePage.this, Finish.class));
+    }
+
+}
 
 

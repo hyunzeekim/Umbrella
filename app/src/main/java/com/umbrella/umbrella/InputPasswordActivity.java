@@ -40,13 +40,24 @@ public class InputPasswordActivity extends AppCompatActivity {
 
             @Override
             public void onComplete(List<PatternLockView.Dot> pattern) {
+                int numWrong = 0;
+
                 if (password.equals(PatternLockUtils.patternToString(mPatternLockView, pattern))) {
-                    Intent intent = new Intent(getApplicationContext(), ProgramActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), ShapePage.class);
                     startActivity(intent);
                     finish();
+
                 } else {
                     Toast.makeText(InputPasswordActivity.this, "Wrong password!", Toast.LENGTH_SHORT).show();
                     mPatternLockView.clearPattern();
+                    numWrong++;
+
+                    if (numWrong >= 3) {
+                        //sends text
+                        Intent intent2 = new Intent(getApplicationContext(), ShapePage.class);
+                        startActivity(intent2);
+                    }
+
                 }
             }
 
