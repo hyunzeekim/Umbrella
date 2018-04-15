@@ -6,25 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.umbrella.umbrella.ChooseContacts">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="368dp"
-        android:layout_marginTop="16dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/background"
-<<<<<<< HEAD
-        tools:ignore="MissingConstraints" />
-=======
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
->>>>>>> 645aaa639cbc4ffd98ff5ca5df0af762f0076d8d
-
-
     <Button
         android:id="@+id/begin_button2"
         android:layout_width="333dp"
@@ -89,29 +70,6 @@
         app:srcCompat="@android:drawable/arrow_down_float" />
 
 <<<<<<< HEAD
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="CheckBox"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox2"
-        app:layout_constraintStart_toStartOf="@+id/checkBox2"
-        tools:layout_editor_absoluteY="245dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="150dp"
-        android:layout_height="71dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457" />
 
     <EditText
         android:id="@+id/etContact1"
@@ -126,10 +84,10 @@
         android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.455" />
 
     <TextView
         android:id="@+id/textView"
