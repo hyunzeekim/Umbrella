@@ -7,12 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 public class ChooseContacts extends AppCompatActivity {
 
-    String contactChosen;
+    private EditText Contact1;
+
+    String number;
     Spinner timeInterval;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +28,9 @@ public class ChooseContacts extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.intervals));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         timeInterval.setAdapter(myAdapter);
+
+        Contact1 = (EditText)findViewById(R.id.etContact1);
+
     }
 
     public void shapeOnClick(View v){
