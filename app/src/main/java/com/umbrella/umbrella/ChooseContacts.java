@@ -1,6 +1,7 @@
 package com.umbrella.umbrella;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,11 +15,12 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class ChooseContacts extends AppCompatActivity {
-
+    EditText etcontact;
     String number;
     Spinner timeInterval;
     ImageButton b1;
     ImageButton b2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,8 @@ public class ChooseContacts extends AppCompatActivity {
                         .show();
             }
         });
+
+        etcontact = (EditText)findViewById(R.id.etcontact);
     }
 
     public void shapeOnClick(View v){
