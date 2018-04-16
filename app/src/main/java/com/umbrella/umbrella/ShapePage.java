@@ -40,6 +40,7 @@ public class ShapePage extends AppCompatActivity {
             }
 
             public void onFinish(){
+                c.sendSMS("5554", "It is time for your Umbrella Check-In!");
                 startActivity(new Intent(ShapePage.this, InputPasswordActivity.class));
             }
         }.start();
@@ -48,6 +49,8 @@ public class ShapePage extends AppCompatActivity {
     public void endJourney(View v){
         startActivity(new Intent(ShapePage.this, Finish.class));
     }
+
+    ChooseContacts c = new ChooseContacts();
 
 }
 

@@ -42,8 +42,8 @@ public class InputPasswordActivity extends AppCompatActivity {
             @Override
             public void onComplete(List<PatternLockView.Dot> pattern) {
                 int numWrong = 0;
-                Log.i("hi", "hi");
-
+                String phoneNum = c.contact1OnClick(null);
+                
                 if (password.equals(PatternLockUtils.patternToString(mPatternLockView, pattern))) {
                     Intent intent = new Intent(getApplicationContext(), ShapePage.class);
                     startActivity(intent);
@@ -54,7 +54,7 @@ public class InputPasswordActivity extends AppCompatActivity {
                     numWrong++;
 
                     if (numWrong >= 3) {
-                        //sends text
+                        c.sendSMS(phoneNum, "Your user may be in danger! Check up on her!");
                         Intent intent2 = new Intent(getApplicationContext(), ShapePage.class);
                         startActivity(intent2);
                     }
@@ -62,10 +62,15 @@ public class InputPasswordActivity extends AppCompatActivity {
                 }
             }
 
+
+
             @Override
             public void onCleared() {
 
             }
         });
     }
+
+    ChooseContacts c = new ChooseContacts();
+
 }

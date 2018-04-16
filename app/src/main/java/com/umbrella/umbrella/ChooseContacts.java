@@ -2,8 +2,12 @@ package com.umbrella.umbrella;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,12 +19,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class ChooseContacts extends AppCompatActivity {
-    EditText etcontact;
-    String number;
     Spinner timeInterval;
-    ImageButton b1;
-    ImageButton b2;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,21 +34,43 @@ public class ChooseContacts extends AppCompatActivity {
         timeInterval.setAdapter(myAdapter);
     }
 
-    public int contact1OnClick(View v){
+    public String contact1OnClick(View v){
         final EditText bt1 =  (EditText) findViewById(R.id.etcontact);
-        return Integer.parseInt(bt1.getText().toString());
+        String phoneNum = (bt1.getText().toString());
+        return phoneNum;
     }
 
-    public int contact2OnClick(View v){
+    public String contact2OnClick(View v){
         final EditText bt2 =  (EditText) findViewById(R.id.etcontact2);
-        return Integer.parseInt(bt2.getText().toString());
+        String phoneNum = (bt2.getText().toString());
+        return phoneNum;
     }
+
 
     public void shapeOnClick(View v){
         Intent timeInterval = new Intent(ChooseContacts.this, ShapePage.class);
         timeInterval.putExtra("timeInterval", this.timeInterval.getSelectedItem().toString());
         startActivity(timeInterval);
 
+    }
+
+    public void sendSMS(String phoneNum, String text){
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
+            try {
+                SmsManager smsManager = SmsManager.getDefault();
+                smsManager.sendTextMessage(phoneNum, null, text, null, null);
+                Toast.makeText(getApplicationContext(), "Message sent", Toast.LENGTH_LONG).show();
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(), e.getMessage().toString(), Toast.LENGTH_LONG).show();
+                e.printStackTrace();
+            }
+        }
+        else{
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            {
+                requestPermissions(new String[]{android.Manifest.permission.SEND_SMS}, 10);
+            }
+        }
     }
 
 
