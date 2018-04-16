@@ -20,17 +20,17 @@
 
     <Button
         android:id="@+id/begin_button2"
-        android:layout_width="333dp"
+        android:layout_width="302dp"
         android:layout_height="93dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="@android:color/background_light"
         android:fontFamily="@font/nunito_extrabold"
         android:onClick="shapeOnClick"
         android:shadowDy="10"
         android:text="START JOURNEY"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@android:color/holo_blue_light"
         android:textColorHighlight="@android:color/holo_blue_dark"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,24 +59,6 @@
         app:layout_constraintVertical_bias="0.103"></Spinner>
 
     <EditText
-        android:id="@+id/etcontact2"
-        android:layout_width="231dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Enter Number"
-        android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.607" />
-
-    <EditText
         android:id="@+id/etcontact"
         android:layout_width="231dp"
         android:layout_height="47dp"
@@ -93,6 +75,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.466" />
+
+    <EditText
+        android:id="@+id/etcontact2"
+        android:layout_width="231dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Enter Number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.607" />
 
     <TextView
         android:id="@+id/textView"

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.andrognito.patternlockview.PatternLockView;
@@ -41,11 +42,11 @@ public class InputPasswordActivity extends AppCompatActivity {
             @Override
             public void onComplete(List<PatternLockView.Dot> pattern) {
                 int numWrong = 0;
+                Log.i("hi", "hi");
 
                 if (password.equals(PatternLockUtils.patternToString(mPatternLockView, pattern))) {
                     Intent intent = new Intent(getApplicationContext(), ShapePage.class);
                     startActivity(intent);
-                    //finish();
 
                 } else {
                     Toast.makeText(InputPasswordActivity.this, "Wrong Shape!", Toast.LENGTH_SHORT).show();
