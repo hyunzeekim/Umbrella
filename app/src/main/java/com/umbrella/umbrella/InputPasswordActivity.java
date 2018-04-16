@@ -45,10 +45,10 @@ public class InputPasswordActivity extends AppCompatActivity {
                 if (password.equals(PatternLockUtils.patternToString(mPatternLockView, pattern))) {
                     Intent intent = new Intent(getApplicationContext(), ShapePage.class);
                     startActivity(intent);
-                    finish();
+                    //finish();
 
                 } else {
-                    Toast.makeText(InputPasswordActivity.this, "Wrong password!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(InputPasswordActivity.this, "Wrong Shape!", Toast.LENGTH_SHORT).show();
                     mPatternLockView.clearPattern();
                     numWrong++;
 
