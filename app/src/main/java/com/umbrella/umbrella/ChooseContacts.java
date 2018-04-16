@@ -33,26 +33,16 @@ public class ChooseContacts extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.intervals));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         timeInterval.setAdapter(myAdapter);
+    }
 
-        b1 = (ImageButton)findViewById(R.id.b1);
-        b2 =(ImageButton)findViewById(R.id.b2);
+    public void contact1OnClick(View v){
+        final EditText bt1 =  (EditText) findViewById(R.id.etcontact);
+        int phoneNum = Integer.parseInt(bt1.getText().toString());
+    }
 
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Contact 1 was chosen", Toast.LENGTH_SHORT)
-                        .show();
-            }
-        });
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Contact 2 was chosen", Toast.LENGTH_SHORT)
-                        .show();
-            }
-        });
-
-        etcontact = (EditText)findViewById(R.id.etcontact);
+    public void contact2OnClick(View v){
+        final EditText bt2 =  (EditText) findViewById(R.id.etcontact2);
+        int phoneNum = Integer.parseInt(bt2.getText().toString());
     }
 
     public void shapeOnClick(View v){
@@ -62,18 +52,5 @@ public class ChooseContacts extends AppCompatActivity {
 
     }
 
-    public void b1OnClick(View v){
-
-    }
-
-    /*public void clickNumber(View v){
-        Button number1;
-        number1 =(Button)findViewById(R.id.contact1);
-        number1.setOnClickListener(v.OnClickListener());
-
-        String number1Text= ((Button)v).getText().toString();
-        System.out.println(number1Text);
-
-    }*/
 
 }

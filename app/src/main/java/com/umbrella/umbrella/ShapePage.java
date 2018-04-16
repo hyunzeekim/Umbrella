@@ -22,7 +22,7 @@ public class ShapePage extends AppCompatActivity {
         String result = timeSpinner.getStringExtra("timeInterval");
         int value = 0;
         if (result.equalsIgnoreCase("5 Minutes")){
-            value = 5*1*1000;
+            value = 5*60*1000;
         }
         if (result.equalsIgnoreCase("10 Minutes")){
             value = 10*60*1000;
