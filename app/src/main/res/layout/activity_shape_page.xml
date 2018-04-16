@@ -56,7 +56,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="76dp"
         android:fontFamily="@font/nunito_extrabold"
-        android:text="TIME UNTIL NEXT CHECK IN"
+        android:text="TIME UNTIL NEXT CHECK-IN"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"

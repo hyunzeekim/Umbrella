@@ -24,11 +24,11 @@ public class ShapePage extends AppCompatActivity {
         if (result.equalsIgnoreCase("5 Minutes")){
             value = 5*60*1000;
         }
-        if (result.equalsIgnoreCase("10 Minutes")){
-            value = 10*60*1000;
-        }
-        else if (result.equalsIgnoreCase("15 Minutes")){
+        if (result.equalsIgnoreCase("15 Minutes")){
             value = 15*60*1000;
+        }
+        else if (result.equalsIgnoreCase("30 Minutes")){
+            value = 30*60*1000;
         }
             new CountDownTimer(value, 1000) {
             public void onTick(long millisUntilFinished) {
