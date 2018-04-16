@@ -21,13 +21,13 @@ public class ShapePage extends AppCompatActivity {
         Intent timeSpinner = getIntent();
         String result = timeSpinner.getStringExtra("timeInterval");
         int value = 0;
-        if (result.equalsIgnoreCase("5 Minutes")){
+        if (result.equalsIgnoreCase("Every 5 Minutes")){
             value = 5*60*1000;
         }
-        if (result.equalsIgnoreCase("15 Minutes")){
+        if (result.equalsIgnoreCase("Every 15 Minutes")){
             value = 15*60*1000;
         }
-        else if (result.equalsIgnoreCase("30 Minutes")){
+        else if (result.equalsIgnoreCase("Every 30 Minutes")){
             value = 30*60*1000;
         }
             new CountDownTimer(value, 1000) {
