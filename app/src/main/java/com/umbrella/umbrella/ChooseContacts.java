@@ -35,14 +35,14 @@ public class ChooseContacts extends AppCompatActivity {
         timeInterval.setAdapter(myAdapter);
     }
 
-    public void contact1OnClick(View v){
+    public int contact1OnClick(View v){
         final EditText bt1 =  (EditText) findViewById(R.id.etcontact);
-        int phoneNum = Integer.parseInt(bt1.getText().toString());
+        return Integer.parseInt(bt1.getText().toString());
     }
 
-    public void contact2OnClick(View v){
+    public int contact2OnClick(View v){
         final EditText bt2 =  (EditText) findViewById(R.id.etcontact2);
-        int phoneNum = Integer.parseInt(bt2.getText().toString());
+        return Integer.parseInt(bt2.getText().toString());
     }
 
     public void shapeOnClick(View v){
