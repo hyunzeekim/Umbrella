@@ -20,9 +20,9 @@
 
     <Button
         android:id="@+id/begin_button2"
-        android:layout_width="302dp"
-        android:layout_height="93dp"
-        android:layout_marginBottom="30dp"
+        android:layout_width="305dp"
+        android:layout_height="99dp"
+        android:layout_marginBottom="28dp"
         android:layout_marginEnd="15dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="@android:color/background_light"
@@ -35,7 +35,7 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         tools:shadowDx="10" />
 
@@ -69,6 +69,7 @@
         android:ems="10"
         android:hint="Enter Number"
         android:inputType="phone"
+        android:textColorLink="@android:color/holo_blue_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.592"

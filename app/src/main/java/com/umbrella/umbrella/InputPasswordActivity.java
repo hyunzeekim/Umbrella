@@ -43,7 +43,7 @@ public class InputPasswordActivity extends AppCompatActivity {
             public void onComplete(List<PatternLockView.Dot> pattern) {
                 int numWrong = 0;
                 String phoneNum = c.contact1OnClick(null);
-                
+
                 if (password.equals(PatternLockUtils.patternToString(mPatternLockView, pattern))) {
                     Intent intent = new Intent(getApplicationContext(), ShapePage.class);
                     startActivity(intent);
