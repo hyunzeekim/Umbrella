@@ -2,8 +2,13 @@ package com.umbrella.umbrella;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.SmsManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -18,6 +23,7 @@ public class InputPasswordActivity extends AppCompatActivity {
     PatternLockView mPatternLockView;
 
     String password;
+    int passwordAttempts = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,28 +47,22 @@ public class InputPasswordActivity extends AppCompatActivity {
 
             @Override
             public void onComplete(List<PatternLockView.Dot> pattern) {
-                int numWrong = 0;
-                String phoneNum = c.contact1OnClick(null);
+                //String phoneNum = c.contact1OnClick(null);
 
                 if (password.equals(PatternLockUtils.patternToString(mPatternLockView, pattern))) {
-                    Intent intent = new Intent(getApplicationContext(), ShapePage.class);
-                    startActivity(intent);
+                    returnToShapePage();
 
                 } else {
                     Toast.makeText(InputPasswordActivity.this, "Wrong Shape!", Toast.LENGTH_SHORT).show();
                     mPatternLockView.clearPattern();
-                    numWrong++;
+                    passwordAttempts++;
 
-                    if (numWrong >= 3) {
-                        c.sendSMS(phoneNum, "Your user may be in danger! Check up on her!");
-                        Intent intent2 = new Intent(getApplicationContext(), ShapePage.class);
-                        startActivity(intent2);
+                    if (passwordAttempts >= 3) {
+                        sendSMS("5555215556", "Your user may be in danger! Check up on her!");
+                        returnToShapePage();
                     }
-
                 }
             }
-
-
 
             @Override
             public void onCleared() {
@@ -71,6 +71,29 @@ public class InputPasswordActivity extends AppCompatActivity {
         });
     }
 
-    ChooseContacts c = new ChooseContacts();
+    public void returnToShapePage() {
+        Intent intent = new Intent(this, ShapePage.class);
+        intent.putExtra("timeInterval", "Every 5 Minutes");
+        startActivity(intent);
+    }
+
+    public void sendSMS(String phoneNum, String text){
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
+            try {
+                SmsManager smsManager = SmsManager.getDefault();
+                smsManager.sendTextMessage(phoneNum, null, text, null, null);
+                Toast.makeText(getApplicationContext(), "Message sent", Toast.LENGTH_LONG).show();
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(), e.getMessage().toString(), Toast.LENGTH_LONG).show();
+                e.printStackTrace();
+            }
+        }
+        else{
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            {
+                requestPermissions(new String[]{android.Manifest.permission.SEND_SMS}, 10);
+            }
+        }
+    }
 
 }
