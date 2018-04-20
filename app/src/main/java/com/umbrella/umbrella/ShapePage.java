@@ -22,16 +22,20 @@ public class ShapePage extends AppCompatActivity {
         Intent timeSpinner = getIntent();
         String result = timeSpinner.getStringExtra("timeInterval");
         int value = 0;
-        if (result.equalsIgnoreCase("5 Minutes")){
-            value = 5*60*1000;
+        if (result.equalsIgnoreCase("Every 5 Minutes")){
+            value = 5*1*1000;
         }
-        if (result.equalsIgnoreCase("10 Minutes")){
-            value = 10*60*1000;
-        }
-        else if (result.equalsIgnoreCase("15 Minutes")){
+        if (result.equalsIgnoreCase("Every 15 Minutes")){
             value = 15*60*1000;
         }
+<<<<<<< HEAD
             countdownTimer = new CountDownTimer(value, 1000) {
+=======
+        else if (result.equalsIgnoreCase("Every 30 Minutes")){
+            value = 30*60*1000;
+        }
+            new CountDownTimer(value, 1000) {
+>>>>>>> 2a40c0285901f910c5ad4bc8cd80a7f53a45d6cb
             public void onTick(long millisUntilFinished) {
             String timeValue = String.format("%02d:%02d",
                     TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),

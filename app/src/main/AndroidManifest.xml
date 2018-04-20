@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.umbrella.umbrella">
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -29,6 +31,7 @@
         <!-- <activity -->
         <!-- android:name=".ShapeSettings" -->
         <!-- android:label="@string/title_activity_shape_settings" /> -->
+<<<<<<< HEAD
         <![CDATA[
         >>>>>>> 0e2c349650054a76e7610c06357e188ae963add0
         ]]>
@@ -36,6 +39,11 @@
         <activity android:name=".CheckIn" />
         <activity android:name=".Finish" />
         <activity android:name=".Start"></activity>
+=======
+        <activity android:name=".ShapePage" />
+        <activity android:name=".CheckIn" />
+        <activity android:name=".Finish" />
+>>>>>>> 2a40c0285901f910c5ad4bc8cd80a7f53a45d6cb
     </application>
 
 </manifest>

@@ -2,8 +2,12 @@ package com.umbrella.umbrella;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,12 +19,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class ChooseContacts extends AppCompatActivity {
-    EditText etcontact;
-    String number;
     Spinner timeInterval;
-    ImageButton b1;
-    ImageButton b2;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,47 +32,27 @@ public class ChooseContacts extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.intervals));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         timeInterval.setAdapter(myAdapter);
-
-        b1 = (ImageButton)findViewById(R.id.b1);
-        b2 =(ImageButton)findViewById(R.id.b2);
-
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Contact 1 was chosen", Toast.LENGTH_SHORT)
-                        .show();
-            }
-        });
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Contact 2 was chosen", Toast.LENGTH_SHORT)
-                        .show();
-            }
-        });
-
-        etcontact = (EditText)findViewById(R.id.etcontact);
     }
 
-    public void shapeOnClick(View v){
+    public String contact1OnClick(View v){
+        final EditText bt1 =  (EditText) findViewById(R.id.etcontact);
+        String phoneNum = (bt1.getText().toString());
+        return phoneNum;
+    }
+
+    public String contact2OnClick(View v){
+        final EditText bt2 =  (EditText) findViewById(R.id.etcontact2);
+        String phoneNum = (bt2.getText().toString());
+        return phoneNum;
+    }
+
+
+    public void shapeOnClick(View v) {
         Intent timeInterval = new Intent(ChooseContacts.this, ShapePage.class);
         timeInterval.putExtra("timeInterval", this.timeInterval.getSelectedItem().toString());
         startActivity(timeInterval);
 
     }
 
-    public void b1OnClick(View v){
-
-    }
-
-    /*public void clickNumber(View v){
-        Button number1;
-        number1 =(Button)findViewById(R.id.contact1);
-        number1.setOnClickListener(v.OnClickListener());
-
-        String number1Text= ((Button)v).getText().toString();
-        System.out.println(number1Text);
-
-    }*/
 
 }
