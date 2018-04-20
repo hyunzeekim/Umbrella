@@ -31,9 +31,19 @@
         <!-- <activity -->
         <!-- android:name=".ShapeSettings" -->
         <!-- android:label="@string/title_activity_shape_settings" /> -->
+<<<<<<< HEAD
+        <![CDATA[
+        >>>>>>> 0e2c349650054a76e7610c06357e188ae963add0
+        ]]>
         <activity android:name=".ShapePage" />
         <activity android:name=".CheckIn" />
         <activity android:name=".Finish" />
+        <activity android:name=".Start"></activity>
+=======
+        <activity android:name=".ShapePage" />
+        <activity android:name=".CheckIn" />
+        <activity android:name=".Finish" />
+>>>>>>> 2a40c0285901f910c5ad4bc8cd80a7f53a45d6cb
     </application>
 
 </manifest>

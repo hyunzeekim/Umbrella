@@ -32,6 +32,7 @@ public class ShapePage extends AppCompatActivity {
             value = 30*60*1000;
         }
             countdownTimer = new CountDownTimer(value, 1000) {
+
             public void onTick(long millisUntilFinished) {
             String timeValue = String.format("%02d:%02d",
                     TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
