@@ -58,7 +58,7 @@ public class InputPasswordActivity extends AppCompatActivity {
                     passwordAttempts++;
 
                     if (passwordAttempts >= 3) {
-                        sendSMS("5555215556", "Your user may be in danger! Check up on her!");
+                        sendSMS("5556", "Your user may be in danger! Check up on her!");
                         returnToShapePage();
                     }
                 }

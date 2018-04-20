@@ -22,7 +22,7 @@ public class ShapePage extends AppCompatActivity {
         String result = timeSpinner.getStringExtra("timeInterval");
         int value = 0;
         if (result.equalsIgnoreCase("Every 5 Minutes")){
-            value = 5*60*1000;
+            value = 5*1*1000;
         }
         if (result.equalsIgnoreCase("Every 15 Minutes")){
             value = 15*60*1000;
@@ -40,7 +40,6 @@ public class ShapePage extends AppCompatActivity {
             }
 
             public void onFinish(){
-                c.sendSMS("5554", "It is time for your Umbrella Check-In!");
                 startActivity(new Intent(ShapePage.this, InputPasswordActivity.class));
             }
         }.start();
@@ -49,8 +48,6 @@ public class ShapePage extends AppCompatActivity {
     public void endJourney(View v){
         startActivity(new Intent(ShapePage.this, Finish.class));
     }
-
-    ChooseContacts c = new ChooseContacts();
 
 }
 
