@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class ShapePage extends AppCompatActivity {
 
     TextView countdown;
+    CountDownTimer countdownTimer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class ShapePage extends AppCompatActivity {
         else if (result.equalsIgnoreCase("Every 30 Minutes")){
             value = 30*60*1000;
         }
-            new CountDownTimer(value, 1000) {
+            countdownTimer = new CountDownTimer(value, 1000) {
             public void onTick(long millisUntilFinished) {
             String timeValue = String.format("%02d:%02d",
                     TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
@@ -46,6 +47,7 @@ public class ShapePage extends AppCompatActivity {
     }
 
     public void endJourney(View v){
+        countdownTimer.cancel();
         startActivity(new Intent(ShapePage.this, Finish.class));
     }
 
