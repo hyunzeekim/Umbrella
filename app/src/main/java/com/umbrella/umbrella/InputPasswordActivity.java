@@ -98,7 +98,6 @@ public class InputPasswordActivity extends AppCompatActivity {
             try {
                 SmsManager smsManager = SmsManager.getDefault();
                 smsManager.sendTextMessage(phoneNum, null, text, null, null);
-                Toast.makeText(getApplicationContext(), "Message sent", Toast.LENGTH_LONG).show();
             } catch (Exception e) {
                 Toast.makeText(getApplicationContext(), e.getMessage().toString(), Toast.LENGTH_LONG).show();
                 e.printStackTrace();
