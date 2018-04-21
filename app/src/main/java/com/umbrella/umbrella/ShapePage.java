@@ -1,15 +1,20 @@
 package com.umbrella.umbrella;
 
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.TextView;
 import android.os.CountDownTimer;
 import android.content.Intent;
+import android.widget.Toast;
+
 import java.util.concurrent.TimeUnit;
 
 public class ShapePage extends AppCompatActivity {
-
     TextView countdown;
     CountDownTimer countdownTimer;
     @Override
@@ -42,9 +47,30 @@ public class ShapePage extends AppCompatActivity {
             }
 
             public void onFinish(){
+                sendSMS("5554", "IT IS TIME FOR YOUR SAFETY UMBRELLA CHECK-IN!");
                 startActivity(new Intent(ShapePage.this, InputPasswordActivity.class));
+
             }
         }.start();
+    }
+
+    public void sendSMS(String phoneNum, String text){
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
+            try {
+                SmsManager smsManager = SmsManager.getDefault();
+                smsManager.sendTextMessage(phoneNum, null, text, null, null);
+                Toast.makeText(getApplicationContext(), "Message sent", Toast.LENGTH_LONG).show();
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(), e.getMessage().toString(), Toast.LENGTH_LONG).show();
+                e.printStackTrace();
+            }
+        }
+        else{
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            {
+                requestPermissions(new String[]{android.Manifest.permission.SEND_SMS}, 10);
+            }
+        }
     }
 
     public void endJourney(View v){

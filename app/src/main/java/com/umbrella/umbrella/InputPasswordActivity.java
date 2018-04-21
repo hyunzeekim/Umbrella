@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.util.Log;
 import android.widget.Toast;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import com.andrognito.patternlockview.PatternLockView;
 import com.andrognito.patternlockview.listener.PatternLockViewListener;
@@ -64,6 +66,19 @@ public class InputPasswordActivity extends AppCompatActivity {
                 }
             }
 
+            public void missedCheck(){
+                new Timer().schedule(new TimerTask(){
+                    public void run() {
+                        InputPasswordActivity.this.runOnUiThread(new Runnable() {
+                            public void run() {
+                                sendSMS("5556", "Your contact may missed a checkin. Please contact them to ensure of their safety.");
+                                returnToShapePage();
+                            }
+                        });
+                    }
+                }, 2000);
+            }
+
             @Override
             public void onCleared() {
 
@@ -76,6 +91,7 @@ public class InputPasswordActivity extends AppCompatActivity {
         intent.putExtra("timeInterval", "Every 5 Minutes");
         startActivity(intent);
     }
+
 
     public void sendSMS(String phoneNum, String text){
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
@@ -95,5 +111,6 @@ public class InputPasswordActivity extends AppCompatActivity {
             }
         }
     }
+
 
 }
