@@ -77,6 +77,6 @@ public class ShapePage extends AppCompatActivity {
         startActivity(new Intent(ShapePage.this, Finish.class));
     }
 
-}
+ }
 
 
