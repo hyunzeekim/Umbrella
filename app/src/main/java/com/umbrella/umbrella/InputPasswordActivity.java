@@ -71,7 +71,7 @@ public class InputPasswordActivity extends AppCompatActivity {
                     public void run() {
                         InputPasswordActivity.this.runOnUiThread(new Runnable() {
                             public void run() {
-                                sendSMS("5556", "Your contact may missed a checkin. Please contact them to ensure of their safety.");
+                                sendSMS("5556", "Your contact missed a checkin. Please contact them to ensure of their safety.");
                                 returnToShapePage();
                             }
                         });
