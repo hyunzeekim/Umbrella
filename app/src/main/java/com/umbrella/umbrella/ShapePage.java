@@ -28,14 +28,11 @@ public class ShapePage extends AppCompatActivity {
         if (result.equalsIgnoreCase("Every 15 Minutes")){
             value = 15*60*1000;
         }
-<<<<<<< HEAD
-            countdownTimer = new CountDownTimer(value, 1000) {
-=======
         else if (result.equalsIgnoreCase("Every 30 Minutes")){
             value = 30*60*1000;
         }
-            new CountDownTimer(value, 1000) {
->>>>>>> 2a40c0285901f910c5ad4bc8cd80a7f53a45d6cb
+            countdownTimer = new CountDownTimer(value, 1000) {
+
             public void onTick(long millisUntilFinished) {
             String timeValue = String.format("%02d:%02d",
                     TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
