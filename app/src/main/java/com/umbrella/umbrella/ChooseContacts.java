@@ -49,9 +49,29 @@ public class ChooseContacts extends AppCompatActivity {
 
     public void shapeOnClick(View v) {
         Intent timeInterval = new Intent(ChooseContacts.this, ShapePage.class);
+        sendSMS("5556", "Hi there! Contact 5554 has started their Umbrella journey. Stay tuned!");
         timeInterval.putExtra("timeInterval", this.timeInterval.getSelectedItem().toString());
         startActivity(timeInterval);
 
+    }
+
+    public void sendSMS(String phoneNum, String text){
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
+            try {
+                SmsManager smsManager = SmsManager.getDefault();
+                smsManager.sendTextMessage(phoneNum, null, text, null, null);
+                Toast.makeText(getApplicationContext(), "Message sent", Toast.LENGTH_LONG).show();
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(), e.getMessage().toString(), Toast.LENGTH_LONG).show();
+                e.printStackTrace();
+            }
+        }
+        else{
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            {
+                requestPermissions(new String[]{android.Manifest.permission.SEND_SMS}, 10);
+            }
+        }
     }
 
 
