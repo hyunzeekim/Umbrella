@@ -34,7 +34,7 @@ public class TimerPage extends AppCompatActivity {
 
         //Run timer according to the chosen time interval
         if (result.equalsIgnoreCase("Every 5 Minutes")){
-            value = 5*1*1000;
+            value = 5*60*1000;
         }
         if (result.equalsIgnoreCase("Every 15 Minutes")){
             value = 15*60*1000;
@@ -56,7 +56,7 @@ public class TimerPage extends AppCompatActivity {
 
             //When timer runs out, send notification that it is time for user's check-in
             public void onFinish(){
-                sendSMS("5554", "IT IS TIME FOR YOUR SAFETY UMBRELLA CHECK-IN!");
+                sendSMS("5555215554", "UMBRELLA CHECK-IN TIME!");
                 startActivity(new Intent(TimerPage.this, InputPasswordActivity.class));
 
             }

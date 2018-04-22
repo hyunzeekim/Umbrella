@@ -11,7 +11,6 @@ import android.os.CountDownTimer;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -20,7 +19,6 @@ import com.andrognito.patternlockview.listener.PatternLockViewListener;
 import com.andrognito.patternlockview.utils.PatternLockUtils;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class InputPasswordActivity extends AppCompatActivity {
 
@@ -39,7 +37,7 @@ public class InputPasswordActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("PREFS", 0);
         password = preferences.getString("password", "0");
 
-        cdt = new CountDownTimer(2000, 1000) {
+        cdt = new CountDownTimer(3*60*1000, 1000) {
 
             //Run timer
             public void onTick(long millisUntilFinished) {
