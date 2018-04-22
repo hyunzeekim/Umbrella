@@ -1,3 +1,5 @@
+//TIMER RUNNING PAGE
+
 package com.umbrella.umbrella;
 
 import android.content.pm.PackageManager;
@@ -19,6 +21,7 @@ public class TimerPage extends AppCompatActivity {
     CountDownTimer countdownTimer;
     static String result;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shape_page);
@@ -28,6 +31,8 @@ public class TimerPage extends AppCompatActivity {
         Intent timeSpinner = getIntent();
         result = timeSpinner.getStringExtra("timeInterval");
         int value = 0;
+
+        //Run timer according to the chosen time interval
         if (result.equalsIgnoreCase("Every 5 Minutes")){
             value = 5*1*1000;
         }
@@ -39,6 +44,7 @@ public class TimerPage extends AppCompatActivity {
         }
             countdownTimer = new CountDownTimer(value, 1000) {
 
+            //Run timer
             public void onTick(long millisUntilFinished) {
             String timeValue = String.format("%02d:%02d",
                     TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
@@ -47,6 +53,7 @@ public class TimerPage extends AppCompatActivity {
             countdown.setText(timeValue);
             }
 
+            //When timer runs out, send notification that it is time for user's check-in
             public void onFinish(){
                 sendSMS("5554", "IT IS TIME FOR YOUR SAFETY UMBRELLA CHECK-IN!");
                 startActivity(new Intent(TimerPage.this, InputPasswordActivity.class));
@@ -55,6 +62,7 @@ public class TimerPage extends AppCompatActivity {
         }.start();
     }
 
+    //Send SMS
     public void sendSMS(String phoneNum, String text){
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
             try {
@@ -73,6 +81,7 @@ public class TimerPage extends AppCompatActivity {
         }
     }
 
+    //When End Journey is pressed, cancel timer
     public void endJourney(View v){
         countdownTimer.cancel();
         startActivity(new Intent(TimerPage.this, Finish.class));

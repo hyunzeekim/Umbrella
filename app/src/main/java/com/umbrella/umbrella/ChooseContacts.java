@@ -1,3 +1,5 @@
+//ENTERING CONTACTS AND CHOOSING TIME INTERVALS PAGE
+
 package com.umbrella.umbrella;
 
 import android.content.Intent;
@@ -13,11 +15,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-
 public class ChooseContacts extends AppCompatActivity {
     Spinner timeInterval;
     static String phoneNum;
 
+    //Drop down menu of time intervals
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,20 +33,22 @@ public class ChooseContacts extends AppCompatActivity {
         timeInterval.setAdapter(myAdapter);
     }
 
+    //Store entered phone number
     public void contact1OnClick(View v){
         final EditText bt1 =  (EditText) findViewById(R.id.etcontact);
         phoneNum = (bt1.getText().toString());
     }
 
-
+    //Send SMS to emergency contact that usr has begun their journey
     public void shapeOnClick(View v) {
         Intent timeInterval = new Intent(ChooseContacts.this, TimerPage.class);
-        sendSMS(phoneNum, "Hi there! Cynthia has started their Umbrella journey. Stay tuned!");
+        sendSMS(phoneNum, "Hi there! Your contact has started their Umbrella journey. Stay tuned!");
         timeInterval.putExtra("timeInterval", this.timeInterval.getSelectedItem().toString());
         startActivity(timeInterval);
 
     }
 
+    //Send SMS
     public void sendSMS(String phoneNum, String text){
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
             try {

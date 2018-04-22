@@ -1,11 +1,11 @@
+//USER CREATING SHAPE
+
 package com.umbrella.umbrella;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 
 import com.andrognito.patternlockview.PatternLockView;
 import com.andrognito.patternlockview.listener.PatternLockViewListener;
@@ -26,7 +26,6 @@ public class CreatePasswordActivity extends AppCompatActivity{
         mPatternLockView = (PatternLockView) findViewById(R.id.pattern_lock_view);
         mPatternLockView.addPatternLockListener(new PatternLockViewListener() {
 
-
             @Override
             public void onStarted() {
 
@@ -37,6 +36,7 @@ public class CreatePasswordActivity extends AppCompatActivity{
 
             }
 
+            //Create shape
             @Override
             public void onComplete(List<PatternLockView.Dot> pattern) {
                 SharedPreferences preferences = getSharedPreferences("PREFS", 0);

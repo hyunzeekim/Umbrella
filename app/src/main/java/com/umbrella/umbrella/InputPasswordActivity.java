@@ -1,3 +1,5 @@
+//USER INPUTS SHAPE
+
 package com.umbrella.umbrella;
 
 import android.content.Intent;
@@ -34,6 +36,7 @@ public class InputPasswordActivity extends AppCompatActivity {
 
         mPatternLockView = (PatternLockView) findViewById(R.id.pattern_lock_view);
         mPatternLockView.addPatternLockListener(new PatternLockViewListener() {
+
             @Override
             public void onStarted() {
 
@@ -44,25 +47,26 @@ public class InputPasswordActivity extends AppCompatActivity {
 
             }
 
+            //Entering in shape
             @Override
             public void onComplete(List<PatternLockView.Dot> pattern) {
 
+                //If correct shape, return to Timer Page
                 if (password.equals(PatternLockUtils.patternToString(mPatternLockView, pattern))) {
-                    returnToShapePage();
+                    returnToTimerPage();
 
                 } else {
                     Toast.makeText(InputPasswordActivity.this, "Wrong Shape!", Toast.LENGTH_SHORT).show();
                     mPatternLockView.clearPattern();
                     passwordAttempts++;
 
+                    //If incorrect more than three times, notify emergency contact and return to timer page
                     if (passwordAttempts >= 3) {
                         sendSMS(c.phoneNum, "Your contact may be in danger! Check up on her!");
-                        returnToShapePage();
+                        returnToTimerPage();
                     }
                 }
             }
-
-
 
             @Override
             public void onCleared() {
@@ -71,13 +75,14 @@ public class InputPasswordActivity extends AppCompatActivity {
         });
     }
 
-    public void returnToShapePage() {
+    //Return to timer page
+    public void returnToTimerPage() {
         Intent intent = new Intent(this, TimerPage.class);
         intent.putExtra("timeInterval", s.result);
         startActivity(intent);
     }
 
-
+    //Send SMS
     public void sendSMS(String phoneNum, String text){
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
             try {
@@ -95,6 +100,7 @@ public class InputPasswordActivity extends AppCompatActivity {
             }
         }
     }
+
     ChooseContacts c = new ChooseContacts();
     TimerPage s = new TimerPage();
 
