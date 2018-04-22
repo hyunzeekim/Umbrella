@@ -7,9 +7,11 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -18,13 +20,16 @@ import com.andrognito.patternlockview.listener.PatternLockViewListener;
 import com.andrognito.patternlockview.utils.PatternLockUtils;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class InputPasswordActivity extends AppCompatActivity {
 
     PatternLockView mPatternLockView;
-
     String password;
     int passwordAttempts = 0;
+
+    CountDownTimer cdt;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +39,27 @@ public class InputPasswordActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("PREFS", 0);
         password = preferences.getString("password", "0");
 
+        cdt = new CountDownTimer(2000, 1000) {
+
+            //Run timer
+            public void onTick(long millisUntilFinished) {
+
+            }
+
+            //When timer runs out, send notification that user missed check-in
+            public void onFinish(){
+                cdt.cancel();
+                sendSMS(c.phoneNum, "Your contact missed a check-in! Please ensure her safety.");
+                returnToTimerPage();
+            }
+        }.start();
+
         mPatternLockView = (PatternLockView) findViewById(R.id.pattern_lock_view);
         mPatternLockView.addPatternLockListener(new PatternLockViewListener() {
 
             @Override
             public void onStarted() {
-
+                cdt.cancel();
             }
 
             @Override

@@ -42,7 +42,8 @@ public class TimerPage extends AppCompatActivity {
         else if (result.equalsIgnoreCase("Every 30 Minutes")){
             value = 30*60*1000;
         }
-            countdownTimer = new CountDownTimer(value, 1000) {
+
+        countdownTimer = new CountDownTimer(value, 1000) {
 
             //Run timer
             public void onTick(long millisUntilFinished) {
