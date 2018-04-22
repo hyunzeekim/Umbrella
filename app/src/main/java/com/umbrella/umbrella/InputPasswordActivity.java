@@ -6,13 +6,10 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
-import android.util.Log;
 import android.widget.Toast;
-import java.util.Timer;
-import java.util.TimerTask;
+
 
 import com.andrognito.patternlockview.PatternLockView;
 import com.andrognito.patternlockview.listener.PatternLockViewListener;
@@ -59,7 +56,7 @@ public class InputPasswordActivity extends AppCompatActivity {
                     passwordAttempts++;
 
                     if (passwordAttempts >= 3) {
-                        sendSMS(c.phoneNum, "Your user may be in danger! Check up on her!");
+                        sendSMS(c.phoneNum, "Your contact may be in danger! Check up on her!");
                         returnToShapePage();
                     }
                 }
