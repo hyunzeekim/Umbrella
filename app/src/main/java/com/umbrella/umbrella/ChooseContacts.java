@@ -18,8 +18,10 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+
 public class ChooseContacts extends AppCompatActivity {
     Spinner timeInterval;
+    static String phoneNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,22 +36,15 @@ public class ChooseContacts extends AppCompatActivity {
         timeInterval.setAdapter(myAdapter);
     }
 
-    public String contact1OnClick(View v){
+    public void contact1OnClick(View v){
         final EditText bt1 =  (EditText) findViewById(R.id.etcontact);
-        String phoneNum = (bt1.getText().toString());
-        return phoneNum;
-    }
-
-    public String contact2OnClick(View v){
-        final EditText bt2 =  (EditText) findViewById(R.id.etcontact2);
-        String phoneNum = (bt2.getText().toString());
-        return phoneNum;
+        phoneNum = (bt1.getText().toString());
     }
 
 
     public void shapeOnClick(View v) {
         Intent timeInterval = new Intent(ChooseContacts.this, ShapePage.class);
-        sendSMS("5556", "Hi there! Contact 5554 has started their Umbrella journey. Stay tuned!");
+        sendSMS(phoneNum, "Hi there! Cynthia has started their Umbrella journey. Stay tuned!");
         timeInterval.putExtra("timeInterval", this.timeInterval.getSelectedItem().toString());
         startActivity(timeInterval);
 

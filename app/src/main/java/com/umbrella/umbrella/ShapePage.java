@@ -17,6 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class ShapePage extends AppCompatActivity {
     TextView countdown;
     CountDownTimer countdownTimer;
+    static String result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +26,7 @@ public class ShapePage extends AppCompatActivity {
         countdown = (TextView) findViewById(R.id.text_view_countdown);
 
         Intent timeSpinner = getIntent();
-        String result = timeSpinner.getStringExtra("timeInterval");
+        result = timeSpinner.getStringExtra("timeInterval");
         int value = 0;
         if (result.equalsIgnoreCase("Every 5 Minutes")){
             value = 5*1*1000;

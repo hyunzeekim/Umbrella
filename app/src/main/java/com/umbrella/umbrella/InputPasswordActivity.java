@@ -49,7 +49,6 @@ public class InputPasswordActivity extends AppCompatActivity {
 
             @Override
             public void onComplete(List<PatternLockView.Dot> pattern) {
-                //String phoneNum = c.contact1OnClick(null);
 
                 if (password.equals(PatternLockUtils.patternToString(mPatternLockView, pattern))) {
                     returnToShapePage();
@@ -60,24 +59,13 @@ public class InputPasswordActivity extends AppCompatActivity {
                     passwordAttempts++;
 
                     if (passwordAttempts >= 3) {
-                        sendSMS("5556", "Your user may be in danger! Check up on her!");
+                        sendSMS(c.phoneNum, "Your user may be in danger! Check up on her!");
                         returnToShapePage();
                     }
                 }
             }
 
-            public void missedCheck(){
-                new Timer().schedule(new TimerTask(){
-                    public void run() {
-                        InputPasswordActivity.this.runOnUiThread(new Runnable() {
-                            public void run() {
-                                sendSMS("5556", "Your contact missed a checkin. Please contact them to ensure of their safety.");
-                                returnToShapePage();
-                            }
-                        });
-                    }
-                }, 2000);
-            }
+
 
             @Override
             public void onCleared() {
@@ -88,7 +76,7 @@ public class InputPasswordActivity extends AppCompatActivity {
 
     public void returnToShapePage() {
         Intent intent = new Intent(this, ShapePage.class);
-        intent.putExtra("timeInterval", "Every 5 Minutes");
+        intent.putExtra("timeInterval", s.result);
         startActivity(intent);
     }
 
@@ -110,6 +98,7 @@ public class InputPasswordActivity extends AppCompatActivity {
             }
         }
     }
-
+    ChooseContacts c = new ChooseContacts();
+    ShapePage s = new ShapePage();
 
 }
