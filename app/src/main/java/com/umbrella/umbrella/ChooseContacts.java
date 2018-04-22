@@ -1,20 +1,15 @@
 package com.umbrella.umbrella;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -43,7 +38,7 @@ public class ChooseContacts extends AppCompatActivity {
 
 
     public void shapeOnClick(View v) {
-        Intent timeInterval = new Intent(ChooseContacts.this, ShapePage.class);
+        Intent timeInterval = new Intent(ChooseContacts.this, TimerPage.class);
         sendSMS(phoneNum, "Hi there! Cynthia has started their Umbrella journey. Stay tuned!");
         timeInterval.putExtra("timeInterval", this.timeInterval.getSelectedItem().toString());
         startActivity(timeInterval);

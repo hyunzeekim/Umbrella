@@ -32,7 +32,7 @@
         <!-- android:name=".ShapeSettings" -->
         <!-- android:label="@string/title_activity_shape_settings" /> -->
 
-        <activity android:name=".ShapePage" />
+        <activity android:name=".TimerPage" />
         <activity android:name=".CheckIn" />
         <activity android:name=".Finish" />
         <activity android:name=".Start"></activity>

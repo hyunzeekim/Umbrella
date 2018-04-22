@@ -72,7 +72,7 @@ public class InputPasswordActivity extends AppCompatActivity {
     }
 
     public void returnToShapePage() {
-        Intent intent = new Intent(this, ShapePage.class);
+        Intent intent = new Intent(this, TimerPage.class);
         intent.putExtra("timeInterval", s.result);
         startActivity(intent);
     }
@@ -96,6 +96,6 @@ public class InputPasswordActivity extends AppCompatActivity {
         }
     }
     ChooseContacts c = new ChooseContacts();
-    ShapePage s = new ShapePage();
+    TimerPage s = new TimerPage();
 
 }

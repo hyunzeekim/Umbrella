@@ -23,6 +23,7 @@ public class CheckIn extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), CreatePasswordActivity.class);
                     startActivity(intent);
                     finish();
+
                 } else {
                     Intent intent = new Intent(getApplicationContext(), InputPasswordActivity.class);
                     startActivity(intent);

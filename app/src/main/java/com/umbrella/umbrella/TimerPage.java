@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import java.util.concurrent.TimeUnit;
 
-public class ShapePage extends AppCompatActivity {
+public class TimerPage extends AppCompatActivity {
     TextView countdown;
     CountDownTimer countdownTimer;
     static String result;
@@ -49,7 +49,7 @@ public class ShapePage extends AppCompatActivity {
 
             public void onFinish(){
                 sendSMS("5554", "IT IS TIME FOR YOUR SAFETY UMBRELLA CHECK-IN!");
-                startActivity(new Intent(ShapePage.this, InputPasswordActivity.class));
+                startActivity(new Intent(TimerPage.this, InputPasswordActivity.class));
 
             }
         }.start();
@@ -75,7 +75,7 @@ public class ShapePage extends AppCompatActivity {
 
     public void endJourney(View v){
         countdownTimer.cancel();
-        startActivity(new Intent(ShapePage.this, Finish.class));
+        startActivity(new Intent(TimerPage.this, Finish.class));
     }
 
  }
