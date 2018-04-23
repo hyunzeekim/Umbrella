@@ -85,8 +85,11 @@ public class TimerPage extends AppCompatActivity {
     //When End Journey is pressed, cancel timer
     public void endJourney(View v){
         countdownTimer.cancel();
+        sendSMS(c.phoneNum, "Your contact has completed their journey!");
         startActivity(new Intent(TimerPage.this, Finish.class));
     }
+
+    ChooseContacts c = new ChooseContacts();
 
  }
 
