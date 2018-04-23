@@ -80,7 +80,7 @@ public class InputPasswordActivity extends AppCompatActivity {
 
                     //If incorrect more than three times, notify emergency contact and return to timer page
                     if (passwordAttempts >= 3) {
-                        sendSMS(c.phoneNum, "Your contact may be in danger! Check up on her!");
+                        sendSMS(c.phoneNum, "Your contact incorrectly inputted their shape. They contact may be in danger! Check up on her!");
                         returnToTimerPage();
                     }
                 }
